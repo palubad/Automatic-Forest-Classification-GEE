@@ -36,6 +36,8 @@ var cloud_cover = 5;
 // Set the number of training points
 var num_traning_points = 2000;
 
+// Set the scale (spatial resolution in meters)
+var set_scale = 30;
 
 // Here are examples of selecting NUTS3 or NUTS4 regions as study area
 // It is possible to use lower NUTS divisions of countries, e.g. NUTS3, NUTS4, etc.
@@ -154,7 +156,7 @@ var input = (collection.clip(study_area))
 var training =  input.addBands(CORINEAndHansenBinary).sample({
   numPixels: num_traning_points,
   seed: 0,
-  scale: 30,
+  scale: set_scale,
   region: study_area,
   tileScale: 4
 });
@@ -179,3 +181,21 @@ var forest_Palette = [
 // Load only forest
 var RF_forests = classified_RF.updateMask(classified_RF.eq(1));
 Map.addLayer(RF_forests, {palette: forest_Palette}, 'Classified forests in '+year);
+
+// Export classified  RF map to Google Drive
+ Export.image.toDrive({
+   image: RF_forests,
+  description: 'Classified_RF_'+year+'_toGoogleDrive',
+  scale: set_scale,
+  region: study_area,
+   maxPixels: 1e13
+ });
+ 
+// Export classified  RF map to Asset
+ Export.image.toAsset({
+   image: RF_forests,
+  description: 'Classified_RF_'+year+'_toAsset',
+  scale: set_scale,
+  region: study_area,
+   maxPixels: 1e13
+ });
