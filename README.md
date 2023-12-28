@@ -12,8 +12,10 @@ In the next parts, the methodology described in this paper is carried out, i.e.,
 All the code used in the creation of the paper, including the comparison of classification algorithms, the accuracy evaluation and the validation points used, is also available in this GitHub repository - refer to the folder "article-processing-codes".
 
 **Codes in the GEE Code Editor**
+
 The codes are available from the GEE CodeEditor JavaScript API from [this URL](https://code.earthengine.google.com/c2f07a9161037480b5fbf8f11a6acaf).
 
 **Forest cover layers for Slovakia for 2017-2022**
+
 These classification results are accessible also through the forest cover database created for the entire territory of Slovakia covering all years from 2017 to 2022. The database stored in raster format has a spatial resolution of 30 m and is freely available as a GEE Image Collection and can be imported using the following code:
 _ee. ImageCollection('users/danielp/Slovakia_forests_2017-2022')_
