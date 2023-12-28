@@ -5,11 +5,12 @@ Authors of the code: Krištofová, V., Paluba, D., Onačillová, K.
 This code is free and open. 
 By using this code and any data derived with it, 
 you agree to cite the following reference 
-in any publications derived from them:
+in any publications and outputs derived from them:
  
-    Krištofová, V., Onačillová, K., Paluba, D. 2023: 
-    Automatická klasifikácia lesnej pokrývky pomocou multispektrálnych satelitných dát 
-    družice Sentinel-2 a metód strojového učenia v Google Earth Engine.
+    Onačillová, K., Krištofová, V., Paluba, D. (2023): 
+    Automatic forest cover classification using Sentinel-2 multispectral satellite data and machine 
+    learning algorithms in Google Earth Engine. Acta Geographica Universitatis Comenianae, pp. 163-185.
+
 
 ###########################################################################################################
 */
