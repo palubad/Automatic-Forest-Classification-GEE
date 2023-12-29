@@ -1,5 +1,5 @@
 # Automatic-Forest-Classification-GEE
-Supplementary material for the article [Onačillová K., Krištofová V., Paluba D. (2023): Automatic Classification of Forests using Sentinel-2 Multispectral Satellite Data and Machine Learning Methods in Google Earth Engine](http://www.actageographica.sk/stiahnutie/67_2_01_Onacilova_Kristofova_Paluba.pdf).
+Supplementary material for the article [Onačillová K., Krištofová V., Paluba D. (2023): Automatic Classification of Forests using Sentinel-2 Multispectral Satellite Data and Machine Learning Methods in Google Earth Engine](http://www.actageographica.sk/stiahnutie/67_2_01_Onacilova_Kristofova_Paluba_final.pdf).
 
 The main objective of this paper was to automatically classify forests using Machine Learning algorithms. In this paper, we developed a tool in Google Earth Engine (GEE) that allows automatic classification of forest cover using Sentinel-2 satellite imagery. The great advantage of the developed tool and the GEE platform is the possibility for users to change the input parameters according to their own requirements and also the possibility to modify parts of the code for their own needs. The developed tool was created using JavaScript using the Code Editor interface in GEE and is available in this GitHub repository.
 
