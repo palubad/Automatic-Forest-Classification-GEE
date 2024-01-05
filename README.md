@@ -13,7 +13,7 @@ All the code used in the creation of the paper, including the comparison of clas
 
 **Codes in the GEE Code Editor**
 
-The codes are available from the GEE CodeEditor JavaScript API from [this URL](https://code.earthengine.google.com/c2f07a9161037480b5fbf8f11a6acaf).
+The codes are available from the GEE CodeEditor JavaScript API from [this URL]([https://code.earthengine.google.com/c2f07a9161037480b5fbf8f11a6acaf2]).
 
 **Forest cover layers for Slovakia for 2017-2022**
 
