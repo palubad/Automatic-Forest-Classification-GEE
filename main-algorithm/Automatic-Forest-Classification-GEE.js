@@ -132,12 +132,19 @@ print(CORINE)
 
 // Create a forest mask for data
 // Select pixels with >50% tree cover and mask out region with forest loss
-var GFC = gfc.select("treecover2000").updateMask(gfc.select("treecover2000").gte(50));
+// Tree cover from 2000
+var GFC2000 = gfc.select("treecover2000");
 
-// Hansen Global forest - Select areas with forest loss from 2000 till 2020
-var maskedLoss = (gfc.select('lossyear').unmask().lt(1)).or(gfc.select('lossyear').unmask().gt(17));
+// Create a forest mask for data
+// Select pixels with >50% tree cover and mask out region with forest loss
+var GFC2000_50 = GFC2000.updateMask(GFC2000.gte(50));
 
-var maskedGFC = GFC.updateMask(maskedLoss);
+// Hansen Global forest - Select areas with forest loss from 2000 until the defined year of monitoring
+var forestLoss = gfc.select('lossyear');
+var lossMask = forestLoss.updateMask(forestLoss.gte(1).and(forestLoss.lte(ee.Number(year).subtract(ee.Number(2000)))));
+
+// Apply the no-loss mask to the tree cover in 2000
+var maskedGFC = GFC2000_50.updateMask(lossMask.unmask().eq(0));
 
 // Load the Copernicus Global Land Cover Layers and use only the selected land cover type
 var CORINE_forests = CORINE.updateMask(CORINE.eq(312).or(CORINE.eq(311)).or(CORINE.eq(313)));
